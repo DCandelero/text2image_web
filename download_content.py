@@ -22,7 +22,7 @@ def get_url(dataset_name, content):
         elif content == "encoders":
             url = "https://drive.google.com/file/d/1IlKRU-Migce8Tn6KY-xRs21i7c6Q-58K/view?usp=sharing"
         elif content == "models":
-            url = ""
+            url = "https://drive.google.com/file/d/17uH3lBr5MyjJJyU9N88U0YIjaIynkSC1/view?usp=sharing"
     elif dataset_name == "coco":
         if content == "data":
             url = ""
@@ -42,7 +42,10 @@ if __name__ == '__main__':
 
     url = get_url(args.dataset, args.content)
 
-    path_to_save_content = args.content
+    if args.content == 'encoders':
+        path_to_save_content = "DAMSMencoders"     
+    else:
+        path_to_save_content = args.content
 
     zip_filename = f"{args.dataset}_{args.content}.zip"
 

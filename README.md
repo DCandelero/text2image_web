@@ -18,12 +18,12 @@ $ pip install -r requirements.txt
 ## Download required content
 Run download_content.py, with the following args below, to download birds encoders:
 ```
-$ python download_content --dataset birds --content encoders
+$ python download_content.py --dataset birds --content encoders
 ```
 
 Run download_content.py, with the following args below, to download birds trained models:
 ```
-$ python download_content --dataset birds --content models
+$ python download_content.py --dataset birds --content models
 ```
 
 ## Run web application
