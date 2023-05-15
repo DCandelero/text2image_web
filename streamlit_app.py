@@ -7,12 +7,14 @@ st.set_page_config(page_title='text2image', page_icon="figures/framed_picture_ic
 with st.sidebar:
     models = ["[birds] scratch (1 epoch)", "[birds] scratch finetune (1 epoch)",
               "[birds] pretrained (590 epochs)", "[birds] pretrained finetune (550 epochs)", 
-              "[coco] pretrained finetune (590 epochs)", "[coco] pretrained (550 epochs)", 
-              "[coco] scratch (1 epochs)", "[coco] scratch finetune (1 epochs)"]
+            #   "[coco] pretrained finetune (590 epochs)", "[coco] pretrained (550 epochs)", 
+            #   "[coco] scratch (1 epochs)", "[coco] scratch finetune (1 epochs)"
+            ]
     models_path = ["models/birds/netG_001.pth", "models/birds/netG_591.pth", 
               "models/birds/netG_590.pth", "models/birds/netG_550.pth",
-              "[coco] pretrained finetune (590 epochs)", "[coco] pretrained (550 epochs)", 
-              "[coco] scratch (1 epochs)", "[coco] scratch finetune (1 epochs)"]
+            #   "[coco] pretrained finetune (590 epochs)", "[coco] pretrained (550 epochs)", 
+            #   "[coco] scratch (1 epochs)", "[coco] scratch finetune (1 epochs)"
+            ]
     model = st.selectbox(
         label="Choose dataset to be used for image generation",
         options=models,
@@ -28,8 +30,8 @@ with st.sidebar:
             of birds. Please enter a sentence to 
             generate images related to this theme, 
             for example:
-            "This bird has a long pointed beak with 
-            a wide wingspan"
+            "This bird is black with a white chest 
+            and belly and has a long neck"
         '''
     else:
         model_help_text = ""

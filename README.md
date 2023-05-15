@@ -30,3 +30,6 @@ $ python download_content.py --dataset birds --content models
 ```
 $ streamlit run streamlit_app.py
 ```
+
+## Web interface screenshot
+![web_interface](./figures/web_interface.png)
