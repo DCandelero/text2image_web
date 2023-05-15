@@ -1,6 +1,6 @@
 # text2image_web
 
-A web interface to generate images by captions. This application uses dl models implemented in [Text to Image Generation with Semantic-Spatial Aware GAN](https://arxiv.org/abs/2104.00567)
+A sample web page that takes text as an input and outputs the image result. This application uses dl models implemented in [Text to Image Generation with Semantic-Spatial Aware GAN](https://arxiv.org/abs/2104.00567)
 
 -----
 
