@@ -4,6 +4,7 @@ import re
 
 st.set_page_config(page_title='text2image', page_icon="figures/framed_picture_icon.png", layout="centered")
 
+# Side bar elements
 with st.sidebar:
     models = ["[birds] scratch (1 epoch)", "[birds] scratch finetune (1 epoch)",
               "[birds] pretrained (590 epochs)", "[birds] pretrained finetune (550 epochs)", 
@@ -45,12 +46,13 @@ with st.sidebar:
         max_value=6,
     )
 
+# Load model only if model_path changes
 @st.cache_resource
 def loading_model(model_path:str):
     return load_model(model_path)
 text_encoder, netG, device, wordtoix = loading_model(model_path)
 
-# Body
+# Body (text input and image generation)
 st.title('Text to image generator')
 
 text_caption = st.text_input('Type a sentence to generate an image',
